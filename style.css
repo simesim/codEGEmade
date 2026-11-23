@@ -1,0 +1,27 @@
+:root{color-scheme:dark;--bg:#191919;--panel:#222;--line:#484848;--paper:#f3f0e8;--muted:#b8b7b1;--lime:#d5f444;--blue:#5145db}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--paper);font:16px/1.5 Arial,Helvetica,sans-serif}
+header{border-bottom:1px solid var(--line)}
+main,.top{width:min(1100px,calc(100% - 48px));margin:auto}
+.top{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.top strong{display:flex;align-items:center;font-size:27px;letter-spacing:-.07em}.top img{width:36px;height:36px;object-fit:contain;margin-right:8px}
+.top small,#note{color:var(--muted)}
+h1{margin:40px 0 28px;font:900 clamp(38px,6vw,72px)/1 'Arial Black',Arial,sans-serif;letter-spacing:-.07em}
+h1 span,.top strong span{color:var(--lime)}
+.bar,.row{display:flex;align-items:end;flex-wrap:wrap;gap:10px}
+section.bar{padding:14px 18px;background:var(--panel);border:1px solid var(--line)}
+section.bar+section.bar{border-top:0}
+label{display:grid;gap:4px;color:var(--muted);font-size:14px}
+button,input,select,textarea{line-height:1.4;font-family:inherit;font-size:16px;color:var(--paper);background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:9px 12px;max-width:100%}
+button,summary{cursor:pointer}button{font-weight:700}button:hover{border-color:var(--paper)}
+.primary{color:var(--bg);background:var(--lime);border-color:var(--lime)}
+div.bar{margin:22px 0 12px}button[aria-pressed=true]{background:var(--blue);color:white;border-color:var(--blue)}
+:focus-visible{outline:2px solid var(--lime);outline-offset:2px}
+details{border-left:1px solid var(--line);margin:.3rem 0;padding-left:10px}
+summary{font-weight:700;padding:8px 0}summary::marker{color:var(--lime)}
+#tree>details{padding:12px 18px;border:1px solid var(--line);background:var(--panel)}
+.item{padding:6px;border-top:1px solid var(--line)}.row label{flex:1;min-width:0}
+textarea{width:100%;resize:vertical}#raw{height:55vh;font:15px/1.6 Consolas,monospace}
+#status{color:var(--lime);white-space:pre-wrap}#status:empty{display:none}#status.error{color:#ffabab}
+#note{font-size:14px;margin:18px 0 40px}
+@media(max-width:600px){main,.top{width:calc(100% - 24px)}section.bar{padding:12px}.bar label{width:100%}h1{margin:28px 0 20px}.item{padding:3px}details{padding-left:6px}}

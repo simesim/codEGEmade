@@ -1,0 +1,8 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Редактор JSON · CodEGE</title><link rel="stylesheet" href="style.css"><body>
+<header><div class="top"><strong><img src="owl.png" alt="">CodEGE<span>.</span></strong><small>Редактор материалов</small></div></header>
+<main><h1>Редактор <span>JSON.</span></h1>
+<section class="bar"><label>Новый документ <select id="type"><option value="config">Шаблон задания</option><option value="catalog">Каталог заданий</option><option value="other">Пустой JSON</option></select></label><button id="create">Создать</button><button id="open">Открыть JSON…</button><input hidden type="file" id="file" accept=".json,application/json"></section>
+<section class="bar"><label>Имя файла <input id="name" value="config.json"></label><button id="download" class="primary">Скачать JSON</button></section>
+<div class="bar"><button id="fields">Поля</button><button id="source">Исходный JSON</button><button id="format" hidden>Форматировать</button></div>
+<p role="status" id="status"></p><section id="tree"></section><textarea id="raw" hidden aria-label="Исходный JSON" spellcheck="false"></textarea>
+<p id="note">В CodEGE код хранится отдельно в template.py. При его изменении сверь позиции пропусков и подсказки с новым кодом.</p></main><script src="presets.js"></script><script src="editor.js"></script></body></html>
